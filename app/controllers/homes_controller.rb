@@ -24,12 +24,13 @@ class HomesController < ApplicationController
 
   def update
     post = Post.find(params[:id])
-    post.title = params[:f_title]
-    post.content = params[:f_content]
-    post.writer = params[:f_writer]
-    post.password = params[:f_password]
-    post.save
-    
+    if post.writer == params[:f_writer]
+      post.title = params[:f_title]
+      post.content = params[:f_content]
+      post.writer = params[:f_writer]
+      post.password = params[:f_password]
+      post.save
+    end
     redirect_to '/homes/index'
   end
 
