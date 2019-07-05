@@ -16,4 +16,12 @@
     <a href="/homes/show/<%=x.id%>"> [내용보기] </a>
     <a href="/homes/edit/<%=x.id%>"> [수정하기] </a>
     <a href="/homes/delete/<%=x.id%>"> [삭제하기] </a>
+    <br>
 <% end %>
+
+<hr>
+
+<form action="/homes/delete_if" method="get">
+    제목이: <input type="text" name="title"> 인 글 삭제하기<br>
+    <input type="submit" value="삭제">
+</form>

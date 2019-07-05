@@ -40,4 +40,14 @@ class HomesController < ApplicationController
     
     redirect_to '/homes/index'
   end
+  
+  def delete_if
+    posts = Post.where(title: params[:title])
+    posts.each do |x|
+      x.destroy
+    end
+    
+    redirect_to '/homes/index'
+  end  
+  
 end
