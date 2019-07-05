@@ -13,6 +13,7 @@
 
 <% @posts.each do |x| %>
     <%= x.title %>
+    <a href="/homes/show/<%=x.id%>"> [내용보기] </a>
     <a href="/homes/edit/<%=x.id%>"> [수정하기] </a>
     <a href="/homes/delete/<%=x.id%>"> [삭제하기] </a>
 <% end %>
